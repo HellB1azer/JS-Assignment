@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Assignment 1</title>
+        <script>
+            var a,b,c;
+            a={Non_Veg:"Mutton", Veg:"Paneer"};
+            b={Non_Veg:"Chicken", Veg:"Peas"};
+            c={Non_Veg:"Egg", Veg:"Okra"};
+            console.time('Time Required to complete the execution of current block');
+            console.log("Used to show message in console");
+            console.error("Shows an error message with symbol");
+            console.warn("Shows a warning message");
+            console.info("Shows an information");
+            console.table({a,b,c}); //Shows information in tabular format 
+            console.timeEnd('Time Required to complete the execution of current block');
+            function res()
+            {
+                console.clear();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Console Object and it's Methods.</h1>
+        <p>Use the button below to clear the console.</p>
+        <input type="button" Value="Clear Console" onclick=res()>
+    </body> 
+</html>
