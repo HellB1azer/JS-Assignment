@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Assignment 2</title>
+    </head>
+    <body>
+        <script>
+            var Cars=['BMW', 'Bentley', 'Audi', 'Ford', 'Ferrari', 'Bugatti'];  //ARRAY
+            console.log(Cars.toString());                                       //Converts into String
+            console.log(Cars.join("<->"));                                      //Converts into string and adds the given value in                                                                      between
+            Cars.pop();                                                         //Removes last value
+            console.log(Cars);                                                      
+            Cars.push("Tata");                                                  //Adds value at end 
+            console.log(Cars);              
+            Cars.shift();                                                       //Removes first element
+            console.log(Cars);
+            Cars.unshift("Mercedes");                                           //Adds element at the beginning
+            console.log(Cars);
+            delete Cars[2];                                                     //Removes element at the specified position
+            console.log(Cars);
+            Cars.splice(0,1);                                                   //Completely removes the element
+            console.log(Cars);
+        
+            var Str="I'm a String";
+            console.log(Str.length);                                            //Gives the length of string in number
+            console.log(Str.indexOf("String"));                                 //Gives the position of the text
+            {
+                let Str="I'm a String";
+                console.log(Str.slice(4,6));                                    //Extracts a part of a string and returns the                                                                       extracted part in a new string.
+            }
+            {
+                let Str="This is a String";
+                console.log(Str.substring(10));                                 //Same as Slice
+            }
+            {
+                let txt=Str.toUpperCase();                                      //Converts the string into UpperCase
+                console.log(txt);
+            }
+            {
+                let txt="      Hello World!!           ";
+                console.log(txt.trim());                                        //Removes extra blank spaces
+            }
+            console.log(Str.charAt(6));                                         //Gives the character at specific value
+            console.log(Str.charCodeAt(5));                                     //Gives the CharacterCode of that character
+            console.log(Str);
+            function rep()
+            {
+                let txt=Str.replace("String", "New Value");                     //Replaces the value int new specified value
+                console.log(txt);
+            }
+        </script>
+        <input type="button" value="Replace Method" onclick=rep()>
+    </body>
+</html>
