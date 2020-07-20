@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Assignment 4</title>
+        <script>
+            function add()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                no2 =Number(fr.b.value);
+                res =parseInt(no1 + no2);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function sub()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                no2 =Number(fr.b.value);
+                res =parseInt(no1 - no2);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function mult()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                no2 =Number(fr.b.value);
+                res =parseInt(no1 * no2);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function div()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                no2 =Number(fr.b.value);
+                res =parseInt(no1 / no2);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function per()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                no2 =Number(fr.b.value);
+                res =parseInt((no1/no2)*100);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function sqrt()
+            {
+                let no1,no2,res;
+                no1 =Number(fr.a.value);
+                fr.b.value="";
+                res = Math.sqrt(no1);
+                document.getElementById("result").innerHTML=(res);
+            }
+            function res()
+            {
+                document.getElementById("result").innerHTML=""
+            }
+        </script>
+    </head>
+    <body>
+        <form name="fr">
+            Enter number 1 &nbsp;<input type="text" value="" name="a"><br><br>
+            Enter number 2 &nbsp;<input type="text" value="" name="b"><br><br>
+            <b>Result:- &nbsp;&nbsp;<b id="result"></b></b><br><br>
+            <input type="button" value="Addition" name="but1" onclick="add()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Substraction" name="but2" onclick="sub()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Multiplication" name="but3" onclick="mult()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Division" name="but4" onclick="div()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Percent" name="but5" onclick="per()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Square Root (only number 1)" name="but6" onclick="sqrt()"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" name="but6" onclick=res()>
+        </form>
+    </body>
+</html>   
