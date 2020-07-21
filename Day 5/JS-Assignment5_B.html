@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Asiggnment 5</title>
+        <script>
+            class User
+            {
+                constructor(name, age, email)
+                {
+                    this.name = name;
+                    this.age = age;
+                    this.email = email;
+                    this.courses=[];
+                    this.Coins=0
+                }
+                static greet()
+                {
+                    console.log(`Nice to see you ${this.name}`);
+                }
+                login()
+                {
+                    console.log(`${this.name} has logged in`);
+                    return this
+                }
+                logout()
+                {
+                    console.log(`${this.name} has logged out`);
+                    return this
+                }
+                getDetails()
+                {
+                    console.log(`Name is ${this.name}, age is ${this.age}, email is ${this.email}`);
+                }
+            }  
+            class Moderator extends User
+            {
+                constructor(name, age, email, role)
+                {
+                    super(name, age, email);
+                    this.role = 'Moderator';
+                }
+                addCoins(user)
+                {
+                    user.Coins++;
+                    console.log(`${this.name} has added 1 coin to ${user.name}. Total Coins:- ${user.Coins}`);
+                    return this
+                }
+                removeCoins(user)
+                {
+                    user.Coins--;
+                    console.log(`Removed 1 coin from ${user.name}. Total Coins:- ${user.Coins}`);
+                }
+            }        
+            class Admin extends Moderator
+                {
+                    addCourse(user,course)
+                    {
+                       user.courses.push(course);
+                        console.log(user);
+                    }
+                    deleteUser(user)
+                    {
+                        users = users.filter(u =>{
+                            return u.email != user.email;
+                        })
+                        console.log(users);
+                    }
+                }
+            let user1 = new User('Rohit', 24, 'rohit@gmail.com');
+            let user2 = new User('Taha', 24, 'taha@gmail.com');
+            let user3 = new User('Ritesh', 24, 'ritz@gmail.com');
+            let user4 = new User('Deepesh', 24, 'deepesh@gmail.com');
+            
+            let mod= new Moderator('Salman', 23, 'salman@gmail.com'); 
+            let admin = new Admin('Arsh', 24, 'arsh@gmail.com');
+            let users=[user1,user2,user3,user4,mod,admin];
+            
+            admin.addCourse(user4, 'Python');
+            admin.addCourse(user3, 'JavaScript');
+            admin.deleteUser(user1);
+            mod.addCoins(user2);
+            admin.addCoins(user4);
+            
+            users.forEach(element => {
+                console.log(element);
+            }) 
+        </script>
+    </head>
+</html>
